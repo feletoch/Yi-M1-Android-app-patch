@@ -1,0 +1,7 @@
+﻿# build output
+build/.work/
+build/out/
+build/patch-src/test/test-out/
+*.jks
+*.keystore
+*.log

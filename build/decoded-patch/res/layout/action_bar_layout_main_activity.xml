@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/BaseActionBarParentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/action_bar_main" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:id="@id/tv_left" android:visibility="gone" style="@style/TitleTextStyle" />
+        <TextView android:id="@id/tv_title" style="@style/TitleMiddleTextStyle" />
+        <TextView android:id="@id/tv_right" style="@style/ActionBarRightMenuStyle" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/action_bar_album" android:background="@color/base_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+        <RadioGroup android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <RadioButton android:id="@id/album_camera_rb" android:checked="true" android:text="@string/album_camera" style="@style/AlbumActionBarRadioButtonStyle" />
+            <RadioButton android:id="@id/album_phone_rb" android:layout_marginLeft="38.0dp" android:text="@string/album_local" style="@style/AlbumActionBarRadioButtonStyle" />
+        </RadioGroup>
+        <TextView android:id="@id/tv_select" android:visibility="gone" android:text="@string/select" android:layout_alignParentRight="true" style="@style/TitleTextStyle" />
+        <TextView android:id="@id/tv_import" android:background="@drawable/home_photo_import_nor" android:visibility="gone" style="@style/ActionBarLeftMenuStyle" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/action_bar_selected" android:background="@color/base_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+        <TextView android:id="@id/cancel_button" android:text="@string/cancel" android:layout_alignParentLeft="true" style="@style/TitleTextStyle" />
+        <TextView android:id="@id/title_textview" android:text="@string/album_select_something_title" style="@style/TitleMiddleTextStyle" />
+        <TextView android:id="@id/select_all_button" android:text="@string/album_select_all" android:layout_alignParentRight="true" style="@style/TitleTextStyle" />
+    </RelativeLayout> //home discover and master guide 
+    <RelativeLayout android:id="@id/rlHome" android:background="@color/base_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@id/imgSetting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/home_hamburger" android:scaleType="centerInside" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+            <TextView android:id="@id/tvDiscover" android:layout_marginRight="@dimen/spacing_30dp" android:text="@string/discover_title" style="@style/AlbumActionBarRadioButtonStyle" />
+            <TextView android:id="@id/tvMasterGuide" android:text="@string/master_title" style="@style/AlbumActionBarRadioButtonStyle" />
+        </LinearLayout>
+        <ImageView android:id="@id/imgMasterPlate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/home_masterplate_control_normal" android:scaleType="centerInside" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>

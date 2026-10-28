@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.xiaoyi.mirrorlesscamera" platformBuildVersionCode="51" platformBuildVersionName="3.1.6_20190517">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="com.xiaomi.permission.AUTH_SERVICE"/>
+    <uses-permission android:name="com.xiaomi.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <permission android:name="com.xiaoyi.mirrorlesscamera.permission.MIPUSH_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.xiaoyi.mirrorlesscamera.permission.MIPUSH_RECEIVE"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.xiaoyi.mirrorlesscamera.common.MApplication" android:requestLegacyExternalStorage="true" android:supportsRtl="true" android:theme="@style/AppNoActionBarTheme" android:usesCleartextTraffic="true">
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.SplashActivity" android:theme="@style/AppStartTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.LoginActivity"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.LoginFacebookActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="true" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:launchMode="singleTask" android:name="com.xiaoyi.mirrorlesscamera.activity.MainActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.CameraBindingActivity"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.CameraConnectActivity"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.CameraUnbindingActivity"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.MarketActivity"/>
+        <activity android:hardwareAccelerated="false" android:launchMode="singleTask" android:name="com.xiaoyi.mirrorlesscamera.activity.AlbumActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:hardwareAccelerated="false" android:name="com.xiaoyi.mirrorlesscamera.activity.ImageImportActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:hardwareAccelerated="false" android:name="com.xiaoyi.mirrorlesscamera.activity.MasterLearnHelpActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:launchMode="singleTask" android:name="com.xiaoyi.mirrorlesscamera.activity.SettingsActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.FeedbackActivity" android:theme="@style/FeedbackActivityStyle"/>
+        <activity android:launchMode="singleTask" android:name="com.xiaoyi.mirrorlesscamera.activity.PhotoPreviewActivity" android:theme="@style/PhotoPreviewStyle"/>
+        <activity android:launchMode="singleTask" android:name="com.xiaoyi.mirrorlesscamera.activity.CameraDownloadActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.AboutActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.SettingResolutionActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.FirmwareUpdateActivity"/>
+        <activity android:name="com.xiaomi.account.openauth.AuthorizeActivity"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.PermissionsWarnActivity" android:theme="@style/AppNoActionBarTheme"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.UserProfileActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.TestDownloadActivity"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.PhotoShareActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.PhotoDetailActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.PrivacyActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.CameraStatusActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.MyMasterLearnActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.MasterLearnDetailActivity" android:theme="@style/MasterLearnActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.CameraMasterLearnActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.CameraMasterLearnDetailActivity" android:theme="@style/MasterLearnActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.MyLocalMasterLearnCanUploadActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.pd.activity.LocalPicEditActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.FaqActivity"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.FaqSearchActivity" android:theme="@style/PhotoPreviewStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.IntroActivity" android:theme="@style/AppStartTheme"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.MoreSettingActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.SettingRawActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.MyMessageActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.InternalWebActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.SettingAreaSelectActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.ConnectHelpActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.LensUpdateActivity"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.LiveViewActivity" android:theme="@style/AppNoActionBarTheme"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.DefaultErrorActivity"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.CameraSettingMoreActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.TestActivity2"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.TestActivity3"/>
+        <activity android:configChanges="keyboard|orientation|screenSize" android:name="com.xiaoyi.mirrorlesscamera.activity.TestActivity4" android:screenOrientation="portrait"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.activity.TestActivity" android:theme="@style/AlbumActivityStyle"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.mob.tools.MobUIShell" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.xiaoyi.mirrorlesscamera.wxapi.WXEntryActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:launchMode="singleTask" android:name="cn.sharesdk.tencent.qq.ReceiveActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="tencent100371282"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|navigation|orientation" android:exported="false" android:name="com.alipay.sdk.app.H5PayActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation" android:exported="false" android:name="com.alipay.sdk.auth.AuthActivity" android:screenOrientation="behind"/>
+        <activity android:name="com.xiaoyi.mirrorlesscamera.kotlin.Discover.DiscoverDetailActivity"/>
+        <meta-data android:name="UMENG_APPKEY" android:value="570f6f01e0f55a3bea002492"/>
+        <meta-data android:name="UMENG_CHANNEL" android:value="google"/>
+        <meta-data android:name="CHANNEL" android:value="google"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/application_id"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.gms.analytics.globalConfigResource" android:resource="@xml/global_tracker"/>
+        <meta-data android:name="Mob-AppKey" android:value="126eb7f88493e"/>
+        <meta-data android:name="Mob-AppSecret" android:value="226acc08628eb9fde65646699da92385"/>
+        <provider android:authorities="com.facebook.app.FacebookContentProvider1427662197247190" android:exported="true" android:name="com.facebook.FacebookContentProvider"/>
+        <receiver android:enabled="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice"/>
+        <service android:enabled="true" android:exported="false" android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":pushservice"/>
+        <service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler"/>
+        <service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService"/>
+        <receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.xiaomi.push.service.receivers.PingReceiver" android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.xiaoyi.mirrorlesscamera.receiver.YiMessageReceiver">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation" android:exported="false" android:name="com.alipay.sdk.app.H5AuthActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation" android:exported="true" android:launchMode="singleInstance" android:name="com.alipay.sdk.app.PayResultActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.alipay.sdk.app.AlipayResultActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="alipaysdk"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:name="com.facebook.CustomTabActivity"/>
+        <provider android:authorities="com.xiaoyi.mirrorlesscamera.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider"/>
+        <receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="android.support.VERSION" android:value="26.1.0"/>
+    </application>
+</manifest>

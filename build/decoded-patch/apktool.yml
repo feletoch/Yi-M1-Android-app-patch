@@ -1,0 +1,19 @@
+version: 3.0.3
+apkFileName: YI+Mirrorless_3.1.6_20190517_APKPure.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 19
+  targetSdkVersion: 28
+versionInfo:
+  versionCode: 51
+  versionName: 3.1.6_20190517
+resourcesInfo:
+  packageId: 127
+doNotCompress:
+- arsc
+- jpg
+- mp4
+- png
+- res/raw/poppylove.acv
